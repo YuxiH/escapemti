@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Mega Fantasy Props Pack/Example Scenes/White Room.unity
-  isLoaded: 1
-  isActive: 1
