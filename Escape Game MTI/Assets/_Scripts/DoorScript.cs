@@ -16,6 +16,7 @@ public class DoorScript : MonoBehaviour {
             if (other.GetComponent<PlayerScript>().keys < 4)
             {
                 inp.SetActive(true);
+                input.DeactivateInputField();
                 input.text = "Not enough keys";
             }
             else
@@ -27,6 +28,7 @@ public class DoorScript : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
+        input.ActivateInputField();
         inp.SetActive(false);
         input.text = "";
         input.placeholder.GetComponent<Text>().text = "";
