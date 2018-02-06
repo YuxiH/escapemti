@@ -37,6 +37,8 @@ public class OpenChest : MonoBehaviour {
     {
         if (input.text == solution && !open)
         {
+            UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController sc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController>();
+            sc.mouseLook.SetCursorLock(true);
             open = true;
             player.GetComponent<PlayerScript>().keys++;
             score.text = "Keys : " + player.GetComponent<PlayerScript>().keys;
