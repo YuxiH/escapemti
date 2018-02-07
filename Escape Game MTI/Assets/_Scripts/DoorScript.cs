@@ -5,10 +5,18 @@ using UnityEngine.UI;
 
 public class DoorScript : MonoBehaviour {
 
-    public InputField input;
-    public GameObject inp;
-    public GameObject message;
+    private GameObject player;
+    private InputField input;
+    private GameObject inp;
     public bool end;
+
+    void Start()
+    {
+        player = GameObject.Find("Player");
+        inp = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+        input = inp.GetComponent<InputField>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("player"))
@@ -34,13 +42,4 @@ public class DoorScript : MonoBehaviour {
         input.placeholder.GetComponent<Text>().text = "";
     }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

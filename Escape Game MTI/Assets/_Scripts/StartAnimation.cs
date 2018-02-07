@@ -10,6 +10,13 @@ public class StartAnimation : MonoBehaviour {
     public float doorSpeed;
     public GameObject sunlight;
     private Light light;
+    private AudioSource audio;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
 	// Use this for initialization
     void OnTriggerEnter(Collider other)
     {
@@ -23,11 +30,14 @@ public class StartAnimation : MonoBehaviour {
         {
             if (door.transform.position.y > 2.5)
             {
+                if (!audio.isPlaying)
+                    audio.Play();
                 door.transform.position += new Vector3(0, -doorSpeed, 0);
                 light.intensity -= doorSpeed * 5;
             }
             else
             {
+                audio.Stop();
                 light.intensity = 0;
             }
         }
@@ -35,12 +45,15 @@ public class StartAnimation : MonoBehaviour {
         {
             if (door.transform.position.y < 6.5)
             {
+                if (!audio.isPlaying)
+                    audio.Play();
                 door.transform.position += new Vector3(0, doorSpeed, 0);
                 if (light.intensity < 15)
                     light.intensity += doorSpeed * 5;
             }
             else
             {
+                audio.Stop();
                 light.intensity = 15;
             }
         }

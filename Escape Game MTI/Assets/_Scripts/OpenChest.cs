@@ -6,12 +6,23 @@ using UnityEngine.UI;
 public class OpenChest : MonoBehaviour {
 
     public string solution;
-    public GameObject player;
-    public GameObject inp;
-    public InputField input;
-    public GameObject top;
-    public Text score;
+    private GameObject player;
+    private GameObject inp;
+    private InputField input;
+    private GameObject top;
+    private Text score;
     private bool open;
+
+
+
+    void Start ()
+    {
+        player = GameObject.Find("Player");
+        top = transform.GetChild(0).gameObject;
+        inp = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+        input = inp.GetComponent<InputField>();
+        score = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -43,6 +54,7 @@ public class OpenChest : MonoBehaviour {
             player.GetComponent<PlayerScript>().keys++;
             score.text = "Keys : " + player.GetComponent<PlayerScript>().keys;
             inp.SetActive(false);
+            GetComponent<AudioSource>().Play();
         }
     }
     
