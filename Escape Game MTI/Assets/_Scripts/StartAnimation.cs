@@ -33,7 +33,7 @@ public class StartAnimation : MonoBehaviour {
                 if (!audio.isPlaying)
                     audio.Play();
                 door.transform.position += new Vector3(0, -doorSpeed, 0);
-                light.intensity -= doorSpeed * 5;
+                light.intensity -= doorSpeed * 0.3f;
             }
             else
             {
@@ -48,13 +48,14 @@ public class StartAnimation : MonoBehaviour {
                 if (!audio.isPlaying)
                     audio.Play();
                 door.transform.position += new Vector3(0, doorSpeed, 0);
-                if (light.intensity < 15)
-                    light.intensity += doorSpeed * 5;
+                if (light.intensity < 1)
+                    light.intensity += doorSpeed * 0.3f;
             }
             else
             {
                 audio.Stop();
-                light.intensity = 15;
+                light.intensity = 1;
+                GetComponent<StartAnimation>().enabled = false;
             }
         }
 

@@ -7,11 +7,11 @@ public class OpenChest : MonoBehaviour {
 
     public string solution;
     private GameObject player;
-    private GameObject inp;
-    private InputField input;
+    private GameObject input;
     private GameObject top;
     private Text score;
     private bool open;
+    private AudioSource audio;
 
 
 
@@ -19,8 +19,7 @@ public class OpenChest : MonoBehaviour {
     {
         player = GameObject.Find("Player");
         top = transform.GetChild(0).gameObject;
-        inp = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
-        input = inp.GetComponent<InputField>();
+        input = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         score = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
     }
 
@@ -28,32 +27,23 @@ public class OpenChest : MonoBehaviour {
     {
         if (other.CompareTag("player") && !open)
         {
-            UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController sc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController>();
-            sc.mouseLook.SetCursorLock(false);
-            inp.SetActive(true);
-            input.placeholder.GetComponent<Text>().text = "Enter 3 digits code ...";
+            input.GetComponent<TextController>().enableInput("Enter 3 digits code ...");
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController sc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController>();
-        sc.mouseLook.SetCursorLock(true);
-        inp.SetActive(false);
-        input.text = "";
-        input.placeholder.GetComponent<Text>().text = "";
+        input.GetComponent<TextController>().disableInput();
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (input.text == solution && !open)
+        if (input.GetComponent<InputField>().text == solution && !open)
         {
-            UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController sc = player.GetComponent<UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController>();
-            sc.mouseLook.SetCursorLock(true);
+            input.GetComponent<TextController>().disableInput();
             open = true;
             player.GetComponent<PlayerScript>().keys++;
             score.text = "Keys : " + player.GetComponent<PlayerScript>().keys;
-            inp.SetActive(false);
             GetComponent<AudioSource>().Play();
         }
     }

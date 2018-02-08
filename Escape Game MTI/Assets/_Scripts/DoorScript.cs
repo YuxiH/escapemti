@@ -6,26 +6,23 @@ using UnityEngine.UI;
 public class DoorScript : MonoBehaviour {
 
     private GameObject player;
-    private InputField input;
-    private GameObject inp;
+    private GameObject input;
     public bool end;
+    public int total;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        inp = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
-        input = inp.GetComponent<InputField>();
+        input = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("player"))
         {
-            if (other.GetComponent<PlayerScript>().keys < 4)
+            if (other.GetComponent<PlayerScript>().keys < total)
             {
-                inp.SetActive(true);
-                input.DeactivateInputField();
-                input.text = "Not enough keys";
+                input.GetComponent<TextController>().enableText("Keys needed: (" + player.GetComponent<PlayerScript>().keys + "/" + total + ")");
             }
             else
             {
@@ -36,10 +33,7 @@ public class DoorScript : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        input.ActivateInputField();
-        inp.SetActive(false);
-        input.text = "";
-        input.placeholder.GetComponent<Text>().text = "";
+        input.GetComponent<TextController>().disableInput();
     }
 
 }
