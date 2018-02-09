@@ -22,6 +22,11 @@ public class TextController : MonoBehaviour {
         input.text = "";
     }
 
+    public int inputSize()
+    {
+        return input.text.Length;
+    }
+
     public void enableInput(string back)
     {
         input.contentType = InputField.ContentType.IntegerNumber;

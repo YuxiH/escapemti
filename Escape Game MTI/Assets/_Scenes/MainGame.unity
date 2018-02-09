@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427135, b: 0.56452316, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2779,6 +2779,11 @@ Prefab:
       propertyPath: score
       value: 
       objectReference: {fileID: 441747716}
+    - target: {fileID: 114244635940458452, guid: 641bc8a5e456d334d886e4534c3c4e37,
+        type: 2}
+      propertyPath: timeMalus
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641bc8a5e456d334d886e4534c3c4e37, type: 2}
   m_IsPrefabParent: 0
@@ -9018,6 +9023,11 @@ Prefab:
       propertyPath: top
       value: 
       objectReference: {fileID: 1411713685}
+    - target: {fileID: 114244635940458452, guid: 641bc8a5e456d334d886e4534c3c4e37,
+        type: 2}
+      propertyPath: timeMalus
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641bc8a5e456d334d886e4534c3c4e37, type: 2}
   m_IsPrefabParent: 0
@@ -13504,7 +13514,7 @@ GameObject:
   - component: {fileID: 865865818}
   - component: {fileID: 865865817}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13539,7 +13549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467f244ccdc364045aa9d53090018bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 120
+  time: 240
 --- !u!114 &865865818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23269,6 +23279,11 @@ Prefab:
       propertyPath: top
       value: 
       objectReference: {fileID: 1944697318}
+    - target: {fileID: 114244635940458452, guid: 641bc8a5e456d334d886e4534c3c4e37,
+        type: 2}
+      propertyPath: timeMalus
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641bc8a5e456d334d886e4534c3c4e37, type: 2}
   m_IsPrefabParent: 0
@@ -32643,6 +32658,11 @@ Prefab:
       propertyPath: score
       value: 
       objectReference: {fileID: 441747716}
+    - target: {fileID: 114244635940458452, guid: 641bc8a5e456d334d886e4534c3c4e37,
+        type: 2}
+      propertyPath: timeMalus
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 641bc8a5e456d334d886e4534c3c4e37, type: 2}
   m_IsPrefabParent: 0

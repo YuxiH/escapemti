@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timerController : MonoBehaviour {
 	public float time =10f;
@@ -19,4 +20,19 @@ public class timerController : MonoBehaviour {
 			GetComponent<Text> ().text = string.Format("{0:0}:{1:00}", Mathf.Floor(time/60), time % 60);
 		}
 	}
+
+    public void changeTime(int reducedTime)
+    {
+        time -= reducedTime;
+    }
+
+    void Update()
+    {
+        if (time <= 0)
+        {
+            GameObject choice = GameObject.Find("GameInfo");
+            choice.GetComponent<GameChoice>().brave = false;
+            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+        }
+    }
 }

@@ -12,7 +12,9 @@ public class OpenChest : MonoBehaviour {
     private Text score;
     private bool open;
     private AudioSource audio;
-
+    private bool wrongFlag;
+    private GameObject timer;
+    public int timeMalus = 1;
 
 
     void Start ()
@@ -21,6 +23,7 @@ public class OpenChest : MonoBehaviour {
         top = transform.GetChild(0).gameObject;
         input = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         score = player.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
+        timer = GameObject.Find("Timer");
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,13 +41,24 @@ public class OpenChest : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (input.GetComponent<InputField>().text == solution && !open)
-        {
-            input.GetComponent<TextController>().disableInput();
-            open = true;
-            player.GetComponent<PlayerScript>().keys++;
-            score.text = "Keys : " + player.GetComponent<PlayerScript>().keys;
-            GetComponent<AudioSource>().Play();
+        if (other.CompareTag("player")) {
+            if (input.GetComponent<InputField>().text == solution && !open)
+            {
+                input.GetComponent<TextController>().disableInput();
+                open = true;
+                player.GetComponent<PlayerScript>().keys++;
+                score.text = "Keys : " + player.GetComponent<PlayerScript>().keys;
+                GetComponent<AudioSource>().Play();
+            }
+            if (!wrongFlag && input.GetComponent<TextController>().inputSize() == 3)
+            {
+                wrongFlag = true;
+                timer.GetComponent<timerController>().changeTime(5);
+            }
+            if (wrongFlag && input.GetComponent<TextController>().inputSize() < 3)
+            {
+                wrongFlag = false;
+            }
         }
     }
     
