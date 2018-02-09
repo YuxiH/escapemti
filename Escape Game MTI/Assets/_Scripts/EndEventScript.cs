@@ -14,8 +14,8 @@ public class EndEventScript : MonoBehaviour {
 	void Start () {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        endButton.GetComponent<Button>().onClick.AddListener(TaskOnClick);
-        replayButton.GetComponent<Button>().onClick.AddListener(TaskOnClick2);
+        endButton.GetComponent<Button>().onClick.AddListener(Task);
+        replayButton.GetComponent<Button>().onClick.AddListener(Task2);
         end = GameObject.Find("The end");
         screamer = GameObject.Find("Screamer");
         GameObject choice = GameObject.Find("GameInfo");
@@ -32,13 +32,14 @@ public class EndEventScript : MonoBehaviour {
         }
 	}
 
-     void TaskOnClick()
+     void Task()
     {
         Application.Quit();
     }
 
-    void TaskOnClick2()
+    void Task2()
     {
+        Destroy(GameObject.Find("GameInfo"));
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 	

@@ -12,13 +12,11 @@ public class GameChoice : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
-    }
-
-    void Start()
-    {
+        yesButton = GameObject.Find("YesButton");
+        noButton = GameObject.Find("NoButton");
         yesButton.GetComponent<Button>().onClick.AddListener(TaskOnClick);
         noButton.GetComponent<Button>().onClick.AddListener(TaskOnClick2);
+        DontDestroyOnLoad(transform.gameObject);
     }
 
     void TaskOnClick()
