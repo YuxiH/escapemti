@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 0f78b778999594295a6250701fb0565c
+timeCreated: 1518195897
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 0000000001000000020000000300000008000000090000000a0000000f00000010000000110000001600000017000000180000001d0000001e0000001f0000002c0000002d0000002e0000002f00000030000000310000003200000033000000340000003500000036000000370000003800000039000000460000004d0000004e0000004f0000005000000051000000520000005300000054000000590000005a0000005b0000005c0000005d0000005e000000630000006a0000006b0000006c0000007100000072000000730000007400000075000000760000007700000078000000
+  assetHash:
+    serializedVersion: 2
+    Hash: f9e659ef57a4f6e9bc85a1937ae85921
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -1.4857401, y: 2.6138973, z: -2.7321637}
+      lookAt: {x: 3.7871172, y: -3.2321563, z: 6.624708}
+      up: {x: 0.23470785, y: 0.87831783, z: 0.41649735}
+      fov: 30
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Abdomen
+    100002: Chest
+    100004: convexhull
+    100006: convexhull 1
+    100008: convexhull 10
+    100010: convexhull 11
+    100012: convexhull 12
+    100014: convexhull 13
+    100016: convexhull 2
+    100018: convexhull 3
+    100020: convexhull 4
+    100022: convexhull 5
+    100024: convexhull 6
+    100026: convexhull 7
+    100028: convexhull 8
+    100030: convexhull 9
+    100032: Group 10
+    100034: Group 108
+    100036: Group 17
+    100038: Group 24
+    100040: Group 3
+    100042: Group 31
+    100044: Group 46
+    100046: Group 70
+    100048: Group 79
+    100050: Group 89
+    100052: Group 99
+    100054: Left Hand
+    100056: LeftCollar
+    100058: LeftFore~1
+    100060: Neck
+    100062: Right Hand
+    100064: RightCol~2
+    100066: RightFor~4
+    100068: //RootNode
+    100070: staticmesh
+    400000: Abdomen
+    400002: Chest
+    400004: convexhull
+    400006: convexhull 1
+    400008: convexhull 10
+    400010: convexhull 11
+    400012: convexhull 12
+    400014: convexhull 13
+    400016: convexhull 2
+    400018: convexhull 3
+    400020: convexhull 4
+    400022: convexhull 5
+    400024: convexhull 6
+    400026: convexhull 7
+    400028: convexhull 8
+    400030: convexhull 9
+    400032: Group 10
+    400034: Group 108
+    400036: Group 17
+    400038: Group 24
+    400040: Group 3
+    400042: Group 31
+    400044: Group 46
+    400046: Group 70
+    400048: Group 79
+    400050: Group 89
+    400052: Group 99
+    400054: Left Hand
+    400056: LeftCollar
+    400058: LeftFore~1
+    400060: Neck
+    400062: Right Hand
+    400064: RightCol~2
+    400066: RightFor~4
+    400068: //RootNode
+    400070: staticmesh
+    2100000: _defaultMat
+    2100002: bone1
+    2300000: Abdomen
+    2300002: Chest
+    2300004: convexhull
+    2300006: convexhull 1
+    2300008: convexhull 10
+    2300010: convexhull 13
+    2300012: convexhull 2
+    2300014: convexhull 3
+    2300016: convexhull 4
+    2300018: convexhull 5
+    2300020: convexhull 6
+    2300022: convexhull 7
+    2300024: convexhull 8
+    2300026: Left Hand
+    2300028: LeftCollar
+    2300030: LeftFore~1
+    2300032: Neck
+    2300034: Right Hand
+    2300036: RightCol~2
+    2300038: RightFor~4
+    2300040: staticmesh
+    3300000: Abdomen
+    3300002: Chest
+    3300004: convexhull
+    3300006: convexhull 1
+    3300008: convexhull 10
+    3300010: convexhull 13
+    3300012: convexhull 2
+    3300014: convexhull 3
+    3300016: convexhull 4
+    3300018: convexhull 5
+    3300020: convexhull 6
+    3300022: convexhull 7
+    3300024: convexhull 8
+    3300026: Left Hand
+    3300028: LeftCollar
+    3300030: LeftFore~1
+    3300032: Neck
+    3300034: Right Hand
+    3300036: RightCol~2
+    3300038: RightFor~4
+    3300040: staticmesh
+    4300000: Mesh staticmesh
+    4300002: Mesh convexhull
+    4300004: Mesh convexhull
+    4300006: Mesh convexhull
+    4300008: Mesh convexhull
+    4300010: Mesh convexhull
+    4300012: Mesh Abdomen
+    4300014: Mesh Chest
+    4300016: Mesh LeftCollar
+    4300018: Mesh Neck
+    4300020: Mesh RightCol~2
+    4300022: Mesh convexhull
+    4300024: Mesh Left Hand
+    4300026: Mesh LeftFore~1
+    4300028: Mesh Right Hand
+    4300030: Mesh RightFor~4
+    4300032: Mesh convexhull
+    4300034: Mesh convexhull
+    4300036: Mesh convexhull
+    4300038: Mesh convexhull
+    4300040: Mesh convexhull
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
