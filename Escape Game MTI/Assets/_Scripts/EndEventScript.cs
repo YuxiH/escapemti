@@ -12,6 +12,8 @@ public class EndEventScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         endButton.GetComponent<Button>().onClick.AddListener(TaskOnClick);
         replayButton.GetComponent<Button>().onClick.AddListener(TaskOnClick2);
         end = GameObject.Find("The end");

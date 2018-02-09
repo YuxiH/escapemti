@@ -58,6 +58,7 @@ public class EndGameScript : MonoBehaviour {
             else
             {
                 sunlight.GetComponent<Light>().intensity = 0;
+                player.GetComponent<RigidbodyFirstPersonController>().enabled = true;
                 SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
                 GetComponent<EndGameScript>().enabled = false;
             }
