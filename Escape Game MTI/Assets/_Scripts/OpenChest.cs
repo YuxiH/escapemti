@@ -53,7 +53,7 @@ public class OpenChest : MonoBehaviour {
             if (!wrongFlag && input.GetComponent<TextController>().inputSize() == 3)
             {
                 wrongFlag = true;
-                timer.GetComponent<timerController>().changeTime(5);
+				timer.GetComponent<timerController>().changeTime(timeMalus);
             }
             if (wrongFlag && input.GetComponent<TextController>().inputSize() < 3)
             {
