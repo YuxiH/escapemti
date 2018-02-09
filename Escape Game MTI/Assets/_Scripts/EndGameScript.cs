@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class EndGameScript : MonoBehaviour {
     private GameObject player;
@@ -57,6 +58,7 @@ public class EndGameScript : MonoBehaviour {
             else
             {
                 sunlight.GetComponent<Light>().intensity = 0;
+                SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
                 GetComponent<EndGameScript>().enabled = false;
             }
         }
